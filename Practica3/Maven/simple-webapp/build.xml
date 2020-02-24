@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<project name="Hello" default="compile">
+	<target name="compile" description="compilar codigo java a un archivo class">
+		<mkdir dir="classes"/>
+		<javac srcdir="src/main/java/com/mycompany/app" destdir="target/classes/com/mycompany/app"/>
+	</target>
+</project>

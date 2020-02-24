@@ -1,0 +1,346 @@
+alumno@eim-alu-83157:~/Escritorio/GPI-2/Practica3/Maven/simple-webapp$ history
+    1  29/01/20 11:47:40 exit
+    2  12/02/20 14:10:51 tar -zxvf android-studio-ide-191.6010548-linux.tar.gz 
+    3  12/02/20 14:11:42 cd android-studio/
+    4  12/02/20 14:11:43 ls
+    5  12/02/20 14:13:09 cd ..
+    6  12/02/20 14:13:18 mv android-studio /opt
+    7  12/02/20 14:13:31 ls -al
+    8  12/02/20 14:13:37 cd android-studio/
+    9  12/02/20 14:13:39 ls -al
+   10  12/02/20 14:14:23 java --version
+   11  12/02/20 14:15:00 cd ..
+   12  12/02/20 14:15:02 ls
+   13  12/02/20 14:15:04 cd ..
+   14  12/02/20 14:15:05 ls
+   15  12/02/20 14:15:10 cd ..
+   16  12/02/20 14:15:11 ls
+   17  12/02/20 14:15:16 cd opt/
+   18  12/02/20 14:15:17 ls
+   19  12/02/20 14:15:47 sudo apt-get install default-jre
+   20  12/02/20 14:16:26 ls
+   21  12/02/20 14:16:29 cd ..
+   22  12/02/20 14:16:30 ls
+   23  12/02/20 14:16:33 ls -al
+   24  12/02/20 14:16:40 java --version
+   25  12/02/20 14:17:18 java -version
+   26  12/02/20 14:17:32 sudo apt-get install default-jre
+   27  12/02/20 14:17:41 java --version
+   28  12/02/20 14:17:46 java -version
+   29  12/02/20 14:19:40 sudo apt-get install android-tools-adb adb android-tools-fastboot fastbot
+   30  12/02/20 14:19:50 sudo apt-get install android-tools-adb adb android-tools-fastboot fastboot
+   31  12/02/20 14:22:23 sudo apt install snapd
+   32  12/02/20 14:36:18 tar -zxvf 
+   33  12/02/20 14:36:22 ls -al
+   34  12/02/20 14:36:54 tar -zxvf arduino-1.8.11-linux64.tar.xz
+   35  12/02/20 14:37:26 tar -Jxvf arduino-1.8.11-linux64.tar.xz
+   36  12/02/20 14:38:01 cd arduino-1.8.11/
+   37  12/02/20 14:38:02 ls
+   38  12/02/20 14:38:05 ls -al
+   39  12/02/20 14:38:11 ./install.sh 
+   40  12/02/20 14:38:28 sudo ./install.sh 
+   41  12/02/20 14:53:24 unzip Bare-Arduino-Project-master.zip 
+   42  12/02/20 14:23:19 ./studio.sh 
+   43  12/02/20 14:23:55 chmod +x studio
+   44  12/02/20 14:23:58 chmod +x studio.h
+   45  12/02/20 14:24:03 ls -al
+   46  12/02/20 14:24:20 ./studio.sh 
+   47  12/02/20 15:04:46 ls
+   48  12/02/20 15:04:48 cd Escritorio/
+   49  12/02/20 15:04:49 ls
+   50  12/02/20 15:04:50 cd practica2/
+   51  12/02/20 15:04:51 ls
+   52  12/02/20 15:05:39 ./graddlew assembleDebug
+   53  12/02/20 15:05:47 ./gradlew assembleDebug
+   54  12/02/20 15:06:57 ls
+   55  12/02/20 15:07:02 cd app
+   56  12/02/20 15:07:03 ls
+   57  12/02/20 15:07:05 cd build/
+   58  12/02/20 15:07:07 ls
+   59  12/02/20 15:07:11 cd outputs/
+   60  12/02/20 15:07:12 ls
+   61  12/02/20 15:07:16 cd apk/
+   62  12/02/20 15:07:17 ls
+   63  12/02/20 15:07:20 cd debug/
+   64  12/02/20 15:07:21 ls
+   65  12/02/20 15:38:55 passwd
+   66  18/02/20 09:06:41 ./gradlew tasks
+   67  18/02/20 09:10:58 ./gradlew target
+   68  18/02/20 09:11:12 ./gradlew "target"
+   69  18/02/20 09:11:25 ls
+   70  18/02/20 09:11:47 ./gradlew check
+   71  18/02/20 09:04:54 ./studio.sh 
+   72  18/02/20 09:52:15 git status
+   73  18/02/20 09:57:32 brew tap osx-cross/avr
+   74  18/02/20 09:57:50 sudo apt install linuxbrew-wrapper
+   75  18/02/20 09:58:35 cd ..
+   76  18/02/20 09:58:38 cd carpetaArduino/
+   77  18/02/20 09:59:48 sudo add-apt-repository ppa:git-core/ppa
+   78  18/02/20 10:00:18 sudo apt-get update && sudo apt-get upgrade
+   79  18/02/20 10:01:03 sudo apt-get install git arduino
+   80  18/02/20 10:01:31 brew tap osx-cross/avr
+   81  18/02/20 10:03:44 brew install avr-gcc
+   82  18/02/20 10:03:59 brew tap osx-cross/avr
+   83  18/02/20 10:04:58 brew install avrdude
+   84  18/02/20 10:06:21 brew install avr-gcc
+   85  18/02/20 10:10:26 brew tap osx-cross/avr
+   86  18/02/20 10:11:09 sudo apt-get install gcc-avr binutils avr-libc avrdude
+   87  18/02/20 10:14:09 git clone https://github.com/ladislas/Bare-Arduino-Project MyArduinoProject
+   88  18/02/20 10:14:14 ls
+   89  18/02/20 10:14:23 c MyArduinoProject/
+   90  18/02/20 10:14:28 ls MyArduinoProject/
+   91  18/02/20 10:16:07 git submodule update --init --recursive
+   92  18/02/20 10:16:11 ls
+   93  18/02/20 10:16:15 cd MyArduinoProject
+   94  18/02/20 10:16:22 git submodule update --init --recursive
+   95  18/02/20 10:16:28 ls
+   96  18/02/20 10:17:51 brew install python python@2
+   97  18/02/20 10:19:06 pip install pyserial & pip2 install pyserial
+   98  18/02/20 10:19:23 sudo apt install phyton-pip
+   99  18/02/20 10:19:44 sudo apt install python-pip
+  100  18/02/20 10:20:22 pip install pyserial & pip2 install pyserial
+  101  18/02/20 10:21:17 ls
+  102  18/02/20 10:21:21 cd src
+  103  18/02/20 10:21:22 ls
+  104  18/02/20 10:21:26 cd FooProject/
+  105  18/02/20 10:21:38 ls
+  106  18/02/20 10:23:10 cp ../../Makefile-Linux.mk ./Makefile
+  107  18/02/20 10:23:13 ls
+  108  18/02/20 10:23:30 nano Makefile 
+  109  18/02/20 10:30:15 make
+  110  18/02/20 10:30:19 ls
+  111  18/02/20 10:30:27 ./Makefile
+  112  18/02/20 10:30:36 chmod +x Makefile 
+  113  18/02/20 10:30:39 ./Makefile
+  114  18/02/20 10:32:57 make
+  115  18/02/20 10:33:00 sudo make
+  116  18/02/20 10:33:12 sudo make upload
+  117  18/02/20 10:35:38 make
+  118  18/02/20 10:36:57 sudo apt-get install arduino
+  119  18/02/20 10:37:13 ls
+  120  18/02/20 10:37:15 make
+  121  18/02/20 10:38:43 cd ../..
+  122  18/02/20 10:38:44 ls
+  123  18/02/20 10:38:48 cd lib
+  124  18/02/20 10:38:49 ls
+  125  18/02/20 10:38:54 cd ..
+  126  18/02/20 10:38:55 cd script/
+  127  18/02/20 10:38:57 ls
+  128  18/02/20 10:39:04 ./install.sh 
+  129  18/02/20 10:39:40 cd arduino-1.8.9/
+  130  18/02/20 10:39:41 ls
+  131  18/02/20 10:39:45 ./install.sh 
+  132  18/02/20 10:39:56 sudo ./install.sh 
+  133  18/02/20 17:56:31 sudo snap install libreoffice --candidate
+  134  18/02/20 17:58:49 ls
+  135  18/02/20 17:59:25 tar -xvzf LibreOffice_6.4.0_Linux_x86-64_deb.tar.gz 
+  136  18/02/20 17:59:33 cd LibreOffice_6.4.0.3_Linux_x86-64_deb/
+  137  18/02/20 17:59:34 ls
+  138  18/02/20 17:59:45 cd DEBS/
+  139  18/02/20 18:00:12 sudo dpkg -i *.deb
+  140  18/02/20 18:02:49 unzip Bare-Arduino-Project-master.zip 
+  141  18/02/20 18:10:49 unzip Arduino-Makefile-8c8ebf71a0b7c7095038eff49153c308daec1ff9.zip 
+  142  18/02/20 18:11:52 make
+  143  18/02/20 18:12:27 ls
+  144  18/02/20 18:12:30 nano Makefile 
+  145  18/02/20 18:15:23 make
+  146  18/02/20 18:20:21 nano Makefile 
+  147  18/02/20 18:21:43 cd ../..
+  148  18/02/20 18:21:46 ls
+  149  18/02/20 18:21:49 cd ..
+  150  18/02/20 18:22:13 git remote set-url origin https://github.com/InakiZabalegui106655/MyArduinoProject
+  151  18/02/20 18:23:19 git remote set-url origin https://github.com/InakiZabalegui106655/MyArduinoProject.git
+  152  18/02/20 18:23:23 ls
+  153  18/02/20 18:23:27 cd MyArduinoProject/
+  154  18/02/20 18:23:32 git remote set-url origin https://github.com/InakiZabalegui106655/MyArduinoProject
+  155  18/02/20 18:24:18 git push origin master
+  156  18/02/20 18:25:33 git remote add origin https://github.com/InakiZabalegui106655/MyArduinoProyect.git
+  157  18/02/20 18:25:36 git push -u origin master
+  158  18/02/20 18:27:25 git remote add origin https://github.com/InakiZabalegui106655/MyArduinoProyect.git
+  159  18/02/20 18:27:27 git push -u origin master
+  160  18/02/20 18:28:21 ls
+  161  18/02/20 18:28:28 cd src/FooProject/
+  162  18/02/20 18:28:30 ls
+  163  18/02/20 18:28:32 make
+  164  18/02/20 18:28:46 history
+  165  19/02/20 14:12:46 git status
+  166  19/02/20 14:13:11 ant version
+  167  19/02/20 14:13:14 maven version
+  168  19/02/20 14:13:45 sudo apt install ant
+  169  19/02/20 14:14:13 ant -version
+  170  19/02/20 14:15:12 sudo apt install maven
+  171  19/02/20 14:15:23 maven version
+  172  19/02/20 14:15:27 maven -version
+  173  19/02/20 14:15:32 maven --version
+  174  19/02/20 14:17:20 ant
+  175  19/02/20 14:17:59 echo %JAVA HOME%
+  176  19/02/20 14:18:06 echo %JAVA_HOME%
+  177  19/02/20 14:20:03 cd Des
+  178  19/02/20 14:20:09 cd Descargas/
+  179  19/02/20 14:20:10 ls
+  180  19/02/20 14:20:34 tar xvzf apache-maven-3.6.3-bin.tar.gz 
+  181  19/02/20 14:20:36 ls
+  182  19/02/20 14:20:39 cd apache-maven-3.6.3/
+  183  19/02/20 14:20:40 ls
+  184  19/02/20 14:21:24 mvn -v
+  185  19/02/20 14:21:44 mvn version
+  186  19/02/20 14:21:51 mvn -version
+  187  19/02/20 14:23:17 ls
+  188  19/02/20 14:23:19 cd bin/
+  189  19/02/20 14:23:20 ls
+  190  19/02/20 14:24:35 echo $JAVA_HOME
+  191  19/02/20 14:28:55 mvn verify
+  192  19/02/20 14:31:01 mkdir Maven
+  193  19/02/20 14:31:03 cd Maven/
+  194  19/02/20 14:31:07 mkdir Simple
+  195  19/02/20 14:31:30 mkdir simplre-webapp
+  196  19/02/20 14:31:48 cd simpl
+  197  19/02/20 14:31:50 cd simple
+  198  19/02/20 14:32:42 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=simple -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+  199  19/02/20 14:33:15 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=simple-webapp -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+  200  19/02/20 14:33:23 ls
+  201  19/02/20 14:34:06 cd ..
+  202  19/02/20 14:41:41 git status
+  203  19/02/20 14:42:06 git add -A
+  204  19/02/20 14:34:22 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=simple -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+  205  19/02/20 14:34:30 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=simple-webapp -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+  206  19/02/20 14:36:41 cd simple
+  207  19/02/20 14:36:42 ls
+  208  19/02/20 14:36:44 cd src/
+  209  19/02/20 14:36:45 ls
+  210  19/02/20 14:36:56 cd ja
+  211  19/02/20 14:37:02 cd main/
+  212  19/02/20 14:37:04 ls
+  213  19/02/20 14:37:06 cd java/
+  214  19/02/20 14:37:07 ls
+  215  19/02/20 14:37:12 cd com/
+  216  19/02/20 14:37:13 ls
+  217  19/02/20 14:37:16 cd mycompany/
+  218  19/02/20 14:37:17 ls
+  219  19/02/20 14:37:19 cd app/
+  220  19/02/20 14:37:21 ls
+  221  19/02/20 14:37:25 cd ..
+  222  19/02/20 14:37:37 cd java/
+  223  19/02/20 14:37:37 ls
+  224  19/02/20 14:37:52 cd ../../
+  225  19/02/20 14:37:55 cd ..
+  226  19/02/20 14:37:56 ls
+  227  19/02/20 14:38:03 nano pom.xml 
+  228  19/02/20 15:42:52 history
+  229  19/02/20 14:44:32 git clone https://github.com/InakiZabalegui106655/GPI-2.git
+  230  19/02/20 14:44:41 ls
+  231  19/02/20 14:44:48 cd GPI-2/
+  232  19/02/20 14:44:49 ls
+  233  19/02/20 14:45:02 mkdir Practica3
+  234  19/02/20 14:45:18 git status
+  235  19/02/20 14:46:34 git add -A
+  236  19/02/20 14:47:04 git commit -m "Realizado apartado de Ant y Maven con entregables de Maven"
+  237  19/02/20 14:47:19 git config --global user.name InakiZabalegui106655
+  238  19/02/20 14:47:38 git config --global user.email zabalegui.106655@e.unavarra.es
+  239  19/02/20 14:47:40 git commit -m "Realizado apartado de Ant y Maven con entregables de Maven"
+  240  19/02/20 14:47:48 git push origin master
+  241  19/02/20 14:53:55 ls
+  242  19/02/20 14:53:59 cd Practica3/
+  243  19/02/20 14:54:01 ls
+  244  19/02/20 14:55:55 git branch req001
+  245  19/02/20 14:56:03 git checkout req001 
+  246  19/02/20 14:56:08 git merge master
+  247  19/02/20 14:56:20 ls
+  248  19/02/20 14:57:27 git checkout master
+  249  19/02/20 14:57:55 git branch hotfix
+  250  19/02/20 14:58:48 git checkout master
+  251  19/02/20 14:59:48 ls
+  252  19/02/20 14:59:56 git add .
+  253  19/02/20 15:03:48 git commit -m "creado index.html"
+  254  19/02/20 15:03:57 git checkout req001 
+  255  19/02/20 15:04:01 git add .
+  256  19/02/20 15:04:22 git commit -m "cambiado index.html en req001"
+  257  19/02/20 15:04:31 ls
+  258  19/02/20 15:04:51 git checkout master
+  259  19/02/20 15:04:55 git branch
+  260  19/02/20 15:05:05 git branch -D hotfix 
+  261  19/02/20 15:05:09 git branch -D req001 
+  262  19/02/20 15:05:34 git branch req001 
+  263  19/02/20 15:05:39 git checkout req001 
+  264  19/02/20 15:05:50 merge master
+  265  19/02/20 15:05:55 git merge master
+  266  19/02/20 15:05:57 ls
+  267  19/02/20 15:06:03 nano index.html 
+  268  19/02/20 15:06:27 git checkout master 
+  269  19/02/20 15:06:33 git branch -D req001 
+  270  19/02/20 15:06:39 nano index.html 
+  271  19/02/20 15:07:15 git branch req001 
+  272  19/02/20 15:07:30 git checkout req001 
+  273  19/02/20 15:07:45 ls
+  274  19/02/20 15:08:00 nano index.html 
+  275  19/02/20 15:08:15 git checkout master
+  276  19/02/20 15:08:19 git add .
+  277  19/02/20 15:08:29 git commit -m "cambiado contenido en master"
+  278  19/02/20 15:08:40 git checkout req001 
+  279  19/02/20 15:08:42 ls
+  280  19/02/20 15:08:46 rm index.html 
+  281  19/02/20 15:08:47 ls
+  282  19/02/20 15:08:51 git merge master
+  283  19/02/20 15:08:53 ls
+  284  19/02/20 15:09:00 nano index.html 
+  285  19/02/20 15:09:19 ls
+  286  19/02/20 15:09:22 git add .
+  287  19/02/20 15:09:31 git commit -m "cambiado contenido en req001"
+  288  19/02/20 15:09:39 git checkout master 
+  289  19/02/20 15:09:46 ls
+  290  19/02/20 15:10:16 git branch hotfix
+  291  19/02/20 15:10:23 git checkout hotfix 
+  292  19/02/20 15:10:25 ls
+  293  19/02/20 15:10:40 nano index.html 
+  294  19/02/20 15:11:07 git add .
+  295  19/02/20 15:11:22 git commit -m "cambiado contenido en hotfix"
+  296  19/02/20 15:11:51 git checkout master
+  297  19/02/20 15:11:56 git merge hotfix 
+  298  19/02/20 15:11:58 ls
+  299  19/02/20 15:12:02 nano index.html 
+  300  19/02/20 15:12:27 nano index.html ç
+  301  19/02/20 15:14:25 git branch -D hotfix 
+  302  19/02/20 15:14:48 git status
+  303  19/02/20 15:14:53 git push 
+  304  19/02/20 15:15:15 git checkout req001 
+  305  19/02/20 15:15:19 git status
+  306  19/02/20 15:15:22 nano index.html 
+  307  19/02/20 15:15:31 git push
+  308  19/02/20 15:15:37 git push origin req001 
+  309  19/02/20 15:15:57 git checkout master 
+  310  19/02/20 15:17:17 cd Maven/
+  311  19/02/20 15:17:19 ls
+  312  19/02/20 15:17:22 cd simple
+  313  19/02/20 15:17:26 nano pom.xml 
+  314  19/02/20 15:23:07 mvn compile
+  315  19/02/20 15:24:38 ant compile
+  316  19/02/20 15:24:56 ls
+  317  19/02/20 15:25:01 cd target/
+  318  19/02/20 15:25:02 ls
+  319  19/02/20 15:25:05 cd maven-status/
+  320  19/02/20 15:25:06 ls
+  321  19/02/20 15:25:09 cd maven-compiler-plugin/
+  322  19/02/20 15:25:11 ls
+  323  19/02/20 15:25:17 cd compile/
+  324  19/02/20 15:25:18 ls
+  325  19/02/20 15:25:22 cd default-compile/
+  326  19/02/20 15:25:23 ls
+  327  19/02/20 15:25:30 cd ../../../..
+  328  19/02/20 15:25:33 cd ..
+  329  19/02/20 15:30:53 ls
+  330  19/02/20 15:37:00 nano build.xml
+  331  19/02/20 15:44:06 ant compile
+  332  24/02/20 16:19:49 history
+  333  24/02/20 16:20:40 ant compile
+  334  24/02/20 16:20:48 ls
+  335  24/02/20 16:20:50 cd simple
+  336  24/02/20 16:20:53 ant compile
+  337  24/02/20 16:26:38 cd ..
+  338  24/02/20 16:26:40 ls
+  339  24/02/20 16:26:42 cd simple
+  340  24/02/20 16:26:45 cd ..
+  341  24/02/20 16:26:49 cd simple-webapp/
+  342  24/02/20 16:26:50 ls
+  343  24/02/20 16:27:03 mvn compile
+  344  24/02/20 16:28:31 ant compile
+  345  24/02/20 16:28:37 history
