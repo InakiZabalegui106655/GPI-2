@@ -9,12 +9,14 @@ import org.junit.Test;
  */
 public class AppTest 
 {
+	private String expectedString = "Hola";
+	
     /**
      * Rigorous Test :-)
      */
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        assertTrue(expectedString.equals(App.cadenaComparar()));
     }
 }
