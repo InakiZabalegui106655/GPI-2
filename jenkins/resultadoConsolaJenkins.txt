@@ -1,0 +1,398 @@
+Lanzada por el usuario zabalegui.106655
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins  in /home/alumno/.jenkins/workspace/practica7
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clonar)
+[Pipeline] git
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/InakiZabalegui106655/GPI-2.git
+ > git init /home/alumno/.jenkins/workspace/practica7 # timeout=10
+Fetching upstream changes from https://github.com/InakiZabalegui106655/GPI-2.git
+ > git --version # timeout=10
+ > git fetch --tags --force --progress -- https://github.com/InakiZabalegui106655/GPI-2.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/InakiZabalegui106655/GPI-2.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/InakiZabalegui106655/GPI-2.git # timeout=10
+Fetching upstream changes from https://github.com/InakiZabalegui106655/GPI-2.git
+ > git fetch --tags --force --progress -- https://github.com/InakiZabalegui106655/GPI-2.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 78fef0a3b73659442399a53ec2e1f076b10ba3e5 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 78fef0a3b73659442399a53ec2e1f076b10ba3e5 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master 78fef0a3b73659442399a53ec2e1f076b10ba3e5 # timeout=10
+Commit message: "actualizado contenido de Arduino"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Arduino)
+[Pipeline] echo
+Compilando proyecto Arduino
+[Pipeline] dir
+Running in /home/alumno/.jenkins/workspace/practica7/ArduinoProject/src/FooProject
+[Pipeline] {
+[Pipeline] sh
++ make
+-------------------------
+Arduino.mk Configuration:
+- [AUTODETECTED]       CURRENT_OS = LINUX 
+- [USER]               ARDUINO_DIR = /usr/share/arduino 
+- [USER]               ARDMK_DIR = /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/Arduino-Makefile 
+- [AUTODETECTED]       ARDUINO_VERSION = 105 
+- [DEFAULT]            ARCHITECTURE =  
+- [DEFAULT]            ARDMK_VENDOR = arduino 
+- [DEFAULT]            ARDUINO_SKETCHBOOK =  
+- [COMPUTED]           ARDUINO_VAR_PATH = /usr/share/arduino/hardware/arduino//variants (from ARDUINO_DIR)
+- [COMPUTED]           BOARDS_TXT = /usr/share/arduino/hardware/arduino//boards.txt (from ARDUINO_DIR)
+- [USER]               AVR_TOOLS_DIR = /usr 
+- [COMPUTED]           ARDUINO_LIB_PATH = /usr/share/arduino/libraries (from ARDUINO_DIR)
+- [USER]               USER_LIB_PATH = /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib 
+- [DEFAULT]            PRE_BUILD_HOOK = pre-build-hook.sh 
+- [USER]               BOARD_SUB = 8MHzatmega328 
+- [USER]               BOARD_TAG = pro 
+- [COMPUTED]           CORE = arduino (from build.core)
+- [COMPUTED]           VARIANT = standard (from build.variant)
+- [USER]               OBJDIR = /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro 
+- [COMPUTED]           ARDUINO_CORE_PATH = /usr/share/arduino/hardware/arduino//cores/arduino (from ARDUINO_DIR, BOARD_TAG and boards.txt)
+-                      No .pde or .ino files found. If you are compiling .c or .cpp files then you need to explicitly include Arduino header files
+-  [USER]              MONITOR_BAUDRATE = 115200 
+- [DEFAULT]            OPTIMIZATION_LEVEL = s 
+- [DEFAULT]            MCU_FLAG_NAME = mmcu 
+- [USER]               CFLAGS_STD = -std=gnu11 
+- [USER]               CXXFLAGS_STD = -std=gnu++17 
+- [COMPUTED]           DEVICE_PATH = /dev/ttyUSB* (from MONITOR_PORT)
+- [DEFAULT]            FORCE_MONITOR_PORT =  
+- [AUTODETECTED]       Size utility: AVR-aware for enhanced output
+-
+-                      SKETCH_LIBS =
+- [USER]                 FooLib
+-
+-                      SYSTEM_LIBS =
+- [SYSTEM]               Wire
+-
+- [COMPUTED]           BOOTLOADER_PARENT = /usr/share/arduino/hardware/arduino//bootloaders (from ARDUINO_DIR)
+- [COMPUTED]           ARDMK_VERSION = 1.6 
+- [COMPUTED]           CC_VERSION = 5.4.0 (avr-gcc)
+-------------------------
+mkdir -p /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always FooProject.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.cpp.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/wiring.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring.c.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/WInterrupts.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/WInterrupts.c.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/wiring_digital.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_digital.c.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/wiring_pulse.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_pulse.c.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/wiring_analog.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_analog.c.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/wiring_shift.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_shift.c.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/avr-libc/realloc.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/avr-libc/realloc.c.o
+/usr/bin/avr-gcc -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -std=gnu11 -flto -fno-fat-lto-objects -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/avr-libc/malloc.c -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/avr-libc/malloc.c.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/IPAddress.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/IPAddress.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/Tone.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/Tone.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/WString.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/WString.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/WMath.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/WMath.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/Print.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/Print.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/HID.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/HID.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/Stream.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/Stream.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/USBCore.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/USBCore.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/new.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/new.cpp.o
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/new.cpp:23:60:[m[K [01;35m[Kaviso: [m[K<;[m[K’ extra [-Wpedantic]
+ int __cxa_guard_acquire(__guard *g) {return !*(char *)(g);};
+[01;32m[K                                                            ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/new.cpp:24:56:[m[K [01;35m[Kaviso: [m[K<;[m[K’ extra [-Wpedantic]
+ void __cxa_guard_release (__guard *g) {*(char *)g = 1;};
+[01;32m[K                                                        ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/new.cpp:25:38:[m[K [01;35m[Kaviso: [m[K<;[m[K’ extra [-Wpedantic]
+ void __cxa_guard_abort (__guard *) {}; 
+[01;32m[K                                      ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/new.cpp:27:33:[m[K [01;35m[Kaviso: [m[K<;[m[K’ extra [-Wpedantic]
+ void __cxa_pure_virtual(void) {};
+[01;32m[K                                 ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/new.cpp:13:6:[m[K [01;35m[Kaviso: [m[Kthe program should also define ‘[01m[Kvoid operator delete(void*, unsigned int)[m[K’ [-Wsized-deallocation]
+ void operator delete(void * ptr)
+[01;32m[K      ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/new.cpp:18:6:[m[K [01;35m[Kaviso: [m[Kthe program should also define ‘[01m[Kvoid operator delete [](void*, unsigned int)[m[K’ [-Wsized-deallocation]
+ void operator delete[](void * ptr)
+[01;32m[K      ^[m[K
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/main.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/main.cpp.o
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/HardwareSerial.cpp.o
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:[m[K En la función ‘[01m[Kvoid store_char(unsigned char, ring_buffer*)[m[K’:
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:100:9:[m[K [01;35m[Kaviso: [m[Kcomparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (i != buffer->tail) {
+[01;32m[K         ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:[m[K En la función ‘[01m[Kvoid __vector_18()[m[K’:
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:129:21:[m[K [01;35m[Kaviso: [m[Kvariable ‘[01m[Kc[m[K’ sin usar [-Wunused-variable]
+       unsigned char c = UDR0;
+[01;32m[K                     ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:[m[K En la función miembro ‘[01m[Kvoid HardwareSerial::begin(long unsigned int, byte)[m[K’:
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:370:11:[m[K [01;35m[Kaviso: [m[Kvariable ‘[01m[Kcurrent_config[m[K’ sin usar [-Wunused-variable]
+   uint8_t current_config;
+[01;32m[K           ^[m[K
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:[m[K En la función miembro ‘[01m[Kvirtual size_t HardwareSerial::write(uint8_t)[m[K’:
+[01m[K/usr/share/arduino/hardware/arduino//cores/arduino/HardwareSerial.cpp:469:12:[m[K [01;35m[Kaviso: [m[Kcomparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (i == _tx_buffer->tail)
+[01;32m[K            ^[m[K
+/usr/bin/avr-g++ -MMD -c -D__PROG_TYPES_COMPAT__ -mmcu=atmega168 -DF_CPU=8000000L -DARDUINO=105  -I/usr/share/arduino/hardware/arduino//cores/arduino -I/usr/share/arduino/hardware/arduino//variants/standard    -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/utility -I/usr/share/arduino/libraries/Wire -I/usr/share/arduino/libraries/Wire/examples/ -I/usr/share/arduino/libraries/Wire/utility/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/ -I/usr/share/arduino/libraries/Wire/    -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/   -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -I/home/alumno/Escritorio/carpetaArduino/MyArduinoProject/lib/FooLib/ -Wall -ffunction-sections -fdata-sections -Os -pedantic -Wall -Wextra -fpermissive -fno-exceptions -std=gnu++17 -fno-threadsafe-statics -flto -fno-devirtualize -fdiagnostics-color=always /usr/share/arduino/hardware/arduino//cores/arduino/CDC.cpp -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/CDC.cpp.o
+/usr/bin/avr-gcc-ar rcs /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/libcore.a  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/WInterrupts.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_digital.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_pulse.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_analog.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/wiring_shift.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/avr-libc/realloc.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/avr-libc/malloc.c.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/IPAddress.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/Tone.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/WString.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/WMath.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/Print.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/HID.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/Stream.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/USBCore.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/new.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/main.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/HardwareSerial.cpp.o  /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/core/CDC.cpp.o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/libs/Wire/utility/twi.c.o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/libs/Wire/utility/twi.c.o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/libs/Wire/Wire.cpp.o   /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/userlibs/FooLib/FooLib.cpp.o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/userlibs/FooLib/FooLib.cpp.o  
+/usr/bin/avr-gcc -fdiagnostics-color -mmcu=atmega168 -Wl,--gc-sections -Os -flto -fuse-linker-plugin -o /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.elf /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.cpp.o   /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/libcore.a -lc -lm 
+/usr/bin/avr-objcopy -j .eeprom --set-section-flags=.eeprom='alloc,load' \
+	--no-change-warnings --change-section-lma .eeprom=0 -O ihex /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.elf /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.eep
+/usr/bin/avr-objcopy -O binary /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.elf /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.bin
+/usr/bin/avr-objcopy -O ihex -R .eeprom /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.elf /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.hex
+
+/usr/bin/avr-size --mcu=atmega168 -C --format=avr /home/alumno/Escritorio/carpetaArduino/MyArduinoProject/build/FooProject/pro/FooProject.elf
+AVR Memory Usage
+----------------
+Device: atmega168
+
+Program:    3144 bytes (19.2% Full)
+(.text + .data + .bootloader)
+
+Data:        347 bytes (33.9% Full)
+(.data + .bss + .noinit)
+
+
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Maven)
+[Pipeline] echo
+Compilando proyecto Maven
+[Pipeline] dir
+Running in /home/alumno/.jenkins/workspace/practica7/Practica3/Maven/simple
+[Pipeline] {
+[Pipeline] sh
++ mvn verify
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.mycompany.app:simple[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding simple 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36msimple[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/alumno/.jenkins/workspace/practica7/Practica3/Maven/simple/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36msimple[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/alumno/.jenkins/workspace/practica7/Practica3/Maven/simple/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:testResources[m [1m(default-testResources)[m @ [36msimple[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/alumno/.jenkins/workspace/practica7/Practica3/Maven/simple/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36msimple[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/alumno/.jenkins/workspace/practica7/Practica3/Maven/simple/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.1:test[m [1m(default-test)[m @ [36msimple[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.mycompany.app.[1mAppTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in com.mycompany.app.[1mAppTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 1, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.0.2:jar[m [1m(default-jar)[m @ [36msimple[0;1m ---[m
+[[1;34mINFO[m] Building jar: /home/alumno/.jenkins/workspace/practica7/Practica3/Maven/simple/target/simple-1.0-SNAPSHOT.jar
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  8.253 s
+[[1;34mINFO[m] Finished at: 2020-03-27T11:24:25Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[Pipeline] sh
++ mvn site
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.mycompany.app:simple[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding simple 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-site-plugin:3.7.1:site[m [1m(default-site)[m @ [36msimple[0;1m ---[m
+[[1;34mINFO[m] configuring report plugin org.apache.maven.plugins:maven-project-info-reports-plugin:3.0.0
+[[1;34mINFO[m] 15 reports detected for maven-project-info-reports-plugin:3.0.0: ci-management, dependencies, dependency-info, dependency-management, distribution-management, index, issue-management, licenses, mailing-lists, modules, plugin-management, plugins, scm, summary, team
+[[1;34mINFO[m] [1mRendering site with default locale English (en)[m
+[[1;34mINFO[m] Relativizing decoration links with respect to localized project URL: http://www.example.com
+[[1;34mINFO[m] Rendering content with [1morg.apache.maven.skins:maven-default-skin:jar:1.2 skin[m.
+[[1;34mINFO[m] Generating "[1mDependencies[m" report [1m --- [0;32mmaven-project-info-reports-plugin:3.0.0:dependencies[m
+[[1;34mINFO[m] Generating "[1mDependency Information[m" report[1m --- [0;32mmaven-project-info-reports-plugin:3.0.0:dependency-info[m
+[[1;34mINFO[m] Generating "[1mAbout[m" report        [1m --- [0;32mmaven-project-info-reports-plugin:3.0.0:index[m
+[[1;34mINFO[m] Generating "[1mPlugin Management[m" report[1m --- [0;32mmaven-project-info-reports-plugin:3.0.0:plugin-management[m
+[[1;34mINFO[m] Generating "[1mPlugins[m" report      [1m --- [0;32mmaven-project-info-reports-plugin:3.0.0:plugins[m
+[[1;34mINFO[m] Generating "[1mSummary[m" report      [1m --- [0;32mmaven-project-info-reports-plugin:3.0.0:summary[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  9.329 s
+[[1;34mINFO[m] Finished at: 2020-03-27T11:24:36Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Android)
+[Pipeline] echo
+Compilando proyecto Android
+[Pipeline] dir
+Running in /home/alumno/.jenkins/workspace/practica7/practica2
+[Pipeline] {
+[Pipeline] sh
++ ./gradlew tasks
+
+> Task :tasks
+
+------------------------------------------------------------
+Tasks runnable from root project
+------------------------------------------------------------
+
+Android tasks
+-------------
+androidDependencies - Displays the Android dependencies of the project.
+signingReport - Displays the signing info for the base and test modules
+sourceSets - Prints out all the source sets defined in this project.
+
+Build tasks
+-----------
+assemble - Assemble main outputs for all the variants.
+assembleAndroidTest - Assembles all the Test applications.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+bundle - Assemble bundles for all the variants.
+clean - Deletes the build directory.
+cleanBuildCache - Deletes the build cache directory.
+compileDebugAndroidTestSources
+compileDebugSources
+compileDebugUnitTestSources
+compileReleaseSources
+compileReleaseUnitTestSources
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+Cleanup tasks
+-------------
+lintFix - Runs lint on all variants and applies any safe suggestions to the source code.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'Practica2'.
+components - Displays the components produced by root project 'Practica2'. [incubating]
+dependencies - Displays all dependencies declared in root project 'Practica2'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'Practica2'.
+dependentComponents - Displays the dependent components of components in root project 'Practica2'. [incubating]
+help - Displays a help message.
+model - Displays the configuration model of root project 'Practica2'. [incubating]
+projects - Displays the sub-projects of root project 'Practica2'.
+properties - Displays the properties of root project 'Practica2'.
+tasks - Displays the tasks runnable from root project 'Practica2' (some of the displayed tasks may belong to subprojects).
+
+Install tasks
+-------------
+installDebug - Installs the Debug build.
+installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+uninstallAll - Uninstall all applications.
+uninstallDebug - Uninstalls the Debug build.
+uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+uninstallRelease - Uninstalls the Release build.
+
+Verification tasks
+------------------
+check - Runs all checks.
+connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+connectedCheck - Runs all device checks on currently connected devices.
+connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+deviceCheck - Runs all device checks using Device Providers and Test Servers.
+lint - Runs lint on all variants.
+lintDebug - Runs lint on the Debug build.
+lintRelease - Runs lint on the Release build.
+lintVitalRelease - Runs lint on just the fatal issues in the release build.
+test - Run unit tests for all variants.
+testDebugUnitTest - Run unit tests for the debug build.
+testReleaseUnitTest - Run unit tests for the release build.
+
+To see all tasks and more detail, run gradlew tasks --all
+
+To see more detail about a task, run gradlew help --task <task>
+
+BUILD SUCCESSFUL in 16s
+1 actionable task: 1 executed
+[Pipeline] sh
++ ./gradlew check
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :app:checkDebugManifest
+> Task :app:compileDebugRenderscript NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :app:mainApkListPersistenceDebug
+> Task :app:generateDebugResValues
+> Task :app:generateDebugResources
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:processDebugManifest
+> Task :app:processDebugResources
+> Task :app:compileDebugJavaWithJavac
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:compileReleaseAidl NO-SOURCE
+> Task :app:compileReleaseRenderscript NO-SOURCE
+> Task :app:checkReleaseManifest
+> Task :app:generateReleaseBuildConfig
+> Task :app:mainApkListPersistenceRelease
+> Task :app:generateReleaseResValues
+> Task :app:generateReleaseResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:processReleaseManifest
+> Task :app:prepareLintJar UP-TO-DATE
+> Task :app:mergeReleaseResources
+> Task :app:processReleaseResources
+> Task :app:javaPreCompileRelease
+> Task :app:compileReleaseJavaWithJavac
+
+> Task :app:lint
+Ran lint on variant debug: 5 issues found
+Ran lint on variant release: 5 issues found
+Wrote HTML report to file:///home/alumno/.jenkins/workspace/practica7/practica2/app/build/reports/lint-results.html
+Wrote XML report to file:///home/alumno/.jenkins/workspace/practica7/practica2/app/build/reports/lint-results.xml
+
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes NO-SOURCE
+> Task :app:preReleaseUnitTestBuild UP-TO-DATE
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
+> Task :app:javaPreCompileReleaseUnitTest
+> Task :app:compileReleaseUnitTestJavaWithJavac
+> Task :app:testReleaseUnitTest
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:compileDebugUnitTestJavaWithJavac
+> Task :app:testDebugUnitTest
+> Task :app:test
+> Task :app:check
+
+BUILD SUCCESSFUL in 49s
+28 actionable tasks: 27 executed, 1 up-to-date
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

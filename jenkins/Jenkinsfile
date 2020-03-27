@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    stages {
+        stage("Clonar") {
+            steps {
+                git url: 'https://github.com/InakiZabalegui106655/GPI-2.git'
+            }
+        }        
+        stage("Arduino") {
+            steps {
+				echo 'Compilando proyecto Arduino'
+				dir('ArduinoProject/src/FooProject'){
+					sh 'make'
+				}
+            }
+        }
+        stage("Maven") {
+            steps {
+				echo 'Compilando proyecto Maven'
+				dir('Practica3/Maven/simple'){
+					sh 'mvn verify'
+					sh 'mvn site'
+				}                
+            }
+        }
+        stage("Android") {
+            steps {
+				echo 'Compilando proyecto Android'
+				dir('practica2'){
+					sh './gradlew tasks'
+					sh './gradlew check'
+				}				
+            }
+        }
+    }   
+}
